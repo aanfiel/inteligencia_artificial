@@ -66,10 +66,12 @@ plot3d(x,y,z)
 xtitle('Gráfico da questão 1', 'Eixo X', 'Eixo Y', 'Eixo Z = f(x,y)');
 ```
 ### Parte 4: Implementação do algoritmo hill climbing
+De início, gera-se um número aleatório entre 1 e o tamanho da matriz z
 
 ```
 // Gera um número aleatório entre 1 e o número de linhas da matriz
 n=grand(1,1,"uin",1,size(z, "r"));
+```
 
 while n<=size(z, "r") do
 maior = z(n);
