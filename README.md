@@ -130,3 +130,8 @@ Ao executar o arquivo [questao1.sce](questao1.sce) no Scilab, podemos verificar 
 * A abertura da janela gráfica exibindo o gráfico da função da questão:
 
 ![grafico_q1](https://user-images.githubusercontent.com/51038132/65838269-cad03700-e2d7-11e9-9a1f-59569719ef10.png)
+
+* O console irá retornar o valor máximo local encontrado:
+
+* A cada execução, como o hill climbing inicia em pontos aleatórios, podemos verificar que o algoritmo pode encontrar diferentes pontos máximos locais:
+
