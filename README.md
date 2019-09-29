@@ -32,6 +32,7 @@ Para a resolução desta questão foram usados dois arquivos:
 ## Autor
 
 * **José Lopes de S. Filho** - [LinkedIn](https://www.linkedin.com/in/joselopesfilho/)
+* *Engenharia da Computação (UFC) - Matrícula # 389097*
 
 ## Licença
 
