@@ -1,7 +1,7 @@
 # Projetos de inteligência artificial
-## Este repositório hospeda os trabalhos realizados durante os estudos de Inteligência Artificial
+### Este repositório hospeda os trabalhos realizados durante os estudos de Inteligência Artificial
 
-### 29/09/2019: Trabalho 1 de inteligência computacional
+# 29/09/2019: Trabalho 1 de inteligência computacional
 
 1. Encontre o máximo da função f(x,y) = |xsen(yπ/4) + ysen(xπ/4)| por meio do algoritmo hill-climbing. As variáveis x e y pertencem ao intervalo entre 0 e 20. Os vizinhos de determinado estado (x, y) são (x, y ± 0,01), (x ± 0,01, y) e (x ± 0,01, y ±
 0,01). Por exemplo, os vizinhos do estado (1,00; 1,00) são (1,00; 1,01), (1,01; 1,01), (0,99; 0,99), (0,99; 1,00) etc.
@@ -29,18 +29,18 @@ Para a resolução desta questão foram usados dois arquivos:
 * [Scilab 6.0.2](https://www.scilab.org/) - Software open source para computação numérica
 * [Linux Mint 19.2 Tina](https://www.linuxmint.com/) - Sistema operacional usado
 
-## Autor
+### Autor
 
 * **José Lopes de S. Filho** - [LinkedIn](https://www.linkedin.com/in/joselopesfilho/)
 * *Engenharia da Computação (UFC) - Matrícula # 389097*
 
-## Licença
+### Licença
 
 Este projeto é licenciado sob a MIT License - ver o arquivo [LICENSE.md](LICENSE.md) para detalhes
 
 ## Código comentado
 
-### Parte 1: Criação das matrizes
+### Parte 1: Criação dos vetores
 Primeiramente, foram criados os dados dos dois eixos *x* e *y*. Após a limpeza das variáveis armazenadas e do console para evitar possíveis conflitos, em seguida foram criados doid vetores com valores de 0 a 20 a intervalos de 0,01.
 ```
 clear; // Limpa as variáveis armazenadas
@@ -127,3 +127,5 @@ end
 ## Discussão dos resultados obtidos
 
 Ao executar o arquivo [questao1.sce](questao1.sce) no Scilab, podemos verificar basicamente duas ações: 
+* A abertura da janela gráfica exibindo o gráfico da função da questão:
+
