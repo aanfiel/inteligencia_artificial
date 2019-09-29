@@ -40,7 +40,7 @@ Este projeto é licenciado sob a MIT License - ver o arquivo [LICENSE.md](LICENS
 
 ## Código comentado
 
-# Parte 1: Criação das matrizes
+### Parte 1: Criação das matrizes
 Primeiramente, foram criados os dados dos dois eixos x e y. Após a limpeza das variáveis armazenadas e do console para evitar possíveis conflitos, em seguida foram criadas duas matrizes coluna com valores de 0 a 20 a passos de 0,01.
 ```
 clear; // Limpa as variáveis armazenadas
@@ -50,18 +50,18 @@ clc; // Limpa o console
 x=[0: 0.01 : 20]';
 y=[0: 0.01 : 20]';
 ```
-# Parte 2: Definição da função solicitada
+### Parte 2: Definição da função solicitada
 Em seguida, foi criada a matriz z com os valores de acordo com a função solicitada na questão.
 
 ```
-z=abs((x.*sin(y.*%pi/4))+(y.*sin(x.*%pi/4))); // Cria uma função f(x,y) = |xsen(y.pi/4)+ysen(x.pi/4)| e a atribui a z
+// Cria uma função f(x,y) = |xsen(y.pi/4)+ysen(x.pi/4)| e a atribui a z
+z=abs((x.*sin(y.*%pi/4))+(y.*sin(x.*%pi/4)));
 ```
-# Parte 3: Plotagem do gráfico da função
+### Parte 3: Plotagem do gráfico da função
 No código abaixo, a janela gráfica é limpa, o gráfico da função solicitada na questão é plotado com os eixos e título do gráfico atribuídos.
 
 ```
 clf; // Limpa a janela gráfica
-
 plot3d(x,y,z)
 xtitle('Gráfico da questão 1', 'Eixo X', 'Eixo Y', 'Eixo Z = f(x,y)');
 ```
