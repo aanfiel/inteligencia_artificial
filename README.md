@@ -81,12 +81,19 @@ maior = z(n);
 ```
 Nesse momento, iniciam-se os testes de valor - Para cada situação prevista, o algoritmo deve ter um dado comportamento. Analisemos cada uma delas:
 
+Para o primeiro caso, se *n* for maior que 1 *(ou seja: não for o primeiro elemento do vetor - pois se fosse, ele poderia voltar a um elemento não existente e retornar erro)* e for menor que seu elemento anterior, atribua ao elemento anterior à variável *maior* e faça com que *n* volte 1 elemento no vetor.
+```
     if(n>1 & maior < z(n-1))
         maior = z(n-1);
         n=n-1;
+ ```
+ Se *n* for menor que o tamanho máximo do vetor *(ou seja: se ele nao for o último elemento do vetor - pois se fosse, ele avançaria a um elemento não existente e retornaria erro)* e seu valor for menor que o do elemento posterior, atribua o valor da frente à variável *maior* e faça com que *n* avance 1 elemento no vetor.
+ ```
     elseif(n<size(z, "r") & maior < z(n+1))
         maior = z(n+1);
         n=n+1;
+  ```
+  
     elseif(n==1)
         if(maior < z(n+1))
             maior = z(n+1);
