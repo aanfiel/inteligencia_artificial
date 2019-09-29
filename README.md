@@ -128,4 +128,4 @@ end
 
 Ao executar o arquivo [questao1.sce](questao1.sce) no Scilab, podemos verificar basicamente duas ações: 
 * A abertura da janela gráfica exibindo o gráfico da função da questão:
-
+[!title](grafico_q1.png)
