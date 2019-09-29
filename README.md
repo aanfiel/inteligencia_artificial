@@ -146,4 +146,4 @@ Desta forma, a cada execução, o algoritmo pode encontrar diferentes máximos l
 
 ## Questão 2
 
-ESCREVER
+**Em processo de criação**
