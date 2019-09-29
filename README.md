@@ -37,3 +37,68 @@ Para a resolução desta questão foram usados dois arquivos:
 ## Licença
 
 Este projeto é licenciado sob a MIT License - ver o arquivo [LICENSE.md](LICENSE.md) para detalhes
+
+## Código comentado
+
+# Parte 1: Criação das matrizes
+Primeiramente, foram criados os dados dos dois eixos x e y. Após a limpeza das variáveis armazenadas e do console para evitar possíveis conflitos, em seguida foram criadas duas matrizes coluna com valores de 0 a 20 a passos de 0,01.
+```
+clear; // Limpa as variáveis armazenadas
+clc; // Limpa o console
+
+// Cria um vetor coluna de valores 0 a 20 com passo 0,01 e os atribui as variáveis x e y
+x=[0: 0.01 : 20]';
+y=[0: 0.01 : 20]';
+```
+# Parte 2: Definição da função solicitada
+Em seguida, foi criada a matriz z com os valores de acordo com a função solicitada na questão.
+
+```
+z=abs((x.*sin(y.*%pi/4))+(y.*sin(x.*%pi/4))); // Cria uma função f(x,y) = |xsen(y.pi/4)+ysen(x.pi/4)| e a atribui a z
+```
+# Parte 3: Plotagem do gráfico da função
+No código abaixo, a janela gráfica é limpa, o gráfico da função solicitada na questão é plotado com os eixos e título do gráfico atribuídos.
+
+```
+clf; // Limpa a janela gráfica
+
+plot3d(x,y,z)
+xtitle('Gráfico da questão 1', 'Eixo X', 'Eixo Y', 'Eixo Z = f(x,y)');
+```
+
+//-----------------------------------------------------------------------------
+// IMPLEMENTAÇÃO DO ALGORITMO HILL CLIMBING
+//-----------------------------------------------------------------------------
+
+// Gera um número aleatório entre 1 e o número de linhas da matriz
+n=grand(1,1,"uin",1,size(z, "r"));
+
+while n<=size(z, "r") do
+maior = z(n);
+    if(n>1 & maior < z(n-1))
+        maior = z(n-1);
+        n=n-1;
+    elseif(n<size(z, "r") & maior < z(n+1))
+        maior = z(n+1);
+        n=n+1;
+    elseif(n==1)
+        if(maior < z(n+1))
+            maior = z(n+1);
+            n=n+1;
+        else
+            disp(maior, n, "Máximo valor local da função: ");
+            break
+        end
+    elseif(n==size(z, "r"))
+        if(maior < z(n-1))
+            maior = z(n-1);
+            n=n-1;
+        else
+            disp(maior, n, "Máximo valor local da função: ");
+            break
+        end
+    else
+        disp(maior,n,"Máximo valor local da função: ");
+        break
+    end
+end
