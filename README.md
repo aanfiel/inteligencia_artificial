@@ -133,5 +133,7 @@ Ao executar o arquivo [questao1.sce](questao1.sce) no Scilab, podemos verificar 
 
 * O console irá retornar o valor máximo local encontrado:
 
+![console_q1](https://user-images.githubusercontent.com/51038132/65838454-8a71b880-e2d9-11e9-844f-a746cb702366.png)
+
 * A cada execução, como o hill climbing inicia em pontos aleatórios, podemos verificar que o algoritmo pode encontrar diferentes pontos máximos locais:
 
