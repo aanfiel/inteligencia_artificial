@@ -21,10 +21,18 @@ Avalie a qualidade de cada modelo pela métrica R2 e R2aj (equações 48 e 49, s
 ### Iniciando 
 Para a resolução desta questão foram usados dois arquivos:
 
-* *questão1.sce* - Código-fonte da aplicação proposta na questão
+* [questao1.sce](questao1.sce) - Código-fonte da aplicação proposta na questão
 * *relatorio_q1.pdf* - Relatório descritivo dos resultados obtidos 
 
 ### Construído em
 
 * [Scilab 6.0.2](https://www.scilab.org/) - Software open source para computação numérica
 * [Linux Mint 19.2 Tina](https://www.linuxmint.com/) - Sistema operacional usado
+
+## Autor
+
+* **José Lopes de S. Filho** - [LinkedIn](https://www.linkedin.com/in/joselopesfilho/)
+
+## Licença
+
+Este projeto é licenciado sob a MIT License - ver o arquivo [LICENSE.md](LICENSE.md) para detalhes
