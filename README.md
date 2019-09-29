@@ -87,13 +87,14 @@ Para o primeiro caso, se *n* for maior que 1 *(ou seja: não for o primeiro elem
         maior = z(n-1);
         n=n-1;
  ```
- Se *n* for menor que o tamanho máximo do vetor *(ou seja: se ele nao for o último elemento do vetor - pois se fosse, ele avançaria a um elemento não existente e retornaria erro)* e seu valor for menor que o do elemento posterior, atribua o valor da frente à variável *maior* e faça com que *n* avance 1 elemento no vetor.
+Se *n* for menor que o tamanho máximo do vetor *(ou seja: se ele nao for o último elemento do vetor - pois se fosse, ele avançaria a um elemento não existente e retornaria erro)* e seu valor for menor que o do elemento posterior, atribua o valor da frente à variável *maior* e faça com que *n* avance 1 elemento no vetor.
  ```
     elseif(n<size(z, "r") & maior < z(n+1))
         maior = z(n+1);
         n=n+1;
   ```
-  
+Caso o valor de *n* escolhido aleatoriamente seja 1, precisamos fazer com que ele verifique apenas o valor posterior; e caso este seja maior, avancar com a busca; caso contrário o algoritmo deve sair do laço e retornar o primeiro elemento como máximo local encontrado - encerrando sua execução.
+ ```
     elseif(n==1)
         if(maior < z(n+1))
             maior = z(n+1);
@@ -102,6 +103,9 @@ Para o primeiro caso, se *n* for maior que 1 *(ou seja: não for o primeiro elem
             disp(maior, n, "Máximo valor local da função: ");
             break
         end
+ ```
+Caso o valor de *n* escolhido aleatoriamento seja o do último elemento do vetor, precisamos fazer com que ele verifique apenas o valor anterior; e caso ele seja maior, continuar a busca; caso contrário o algoritmo sai do laço e retorna este último elemento como máximo local encontrado - encerrando sua execução.
+```
     elseif(n==size(z, "r"))
         if(maior < z(n-1))
             maior = z(n-1);
@@ -110,8 +114,16 @@ Para o primeiro caso, se *n* for maior que 1 *(ou seja: não for o primeiro elem
             disp(maior, n, "Máximo valor local da função: ");
             break
         end
+ ```
+ Caso o algoritmo encontre um valor que seja tanto maior que o seu valor anterior, quanto seu posterior, terá sido encontrado um máximo local; devendo esse valor ser retornado no console, o laço encerrado e o algoritmo finalizado.
+ ```
     else
         disp(maior,n,"Máximo valor local da função: ");
         break
     end
 end
+```
+
+## Discussão dos resultados obtidos
+
+Ao executar o arquivo [questao1.sce](questao1.sce) no Scilab, podemos verificar basicamente duas ações: 
