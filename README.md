@@ -23,7 +23,7 @@ Para a resolução desta questão e criação deste relatório foram usados os s
 
 * [questao1.sce](questao1.sce) - Código-fonte da aplicação proposta na questão
 * [grafico_q1.png](grafico_q1.png) - Gráfico gerado pela aplicação durante a execução
-* [console_q1.png](console_q1.ṕng) - Retorno do console da aplicação ao final da execução
+* [console_q1.png](console_q1.png) - Retorno do console da aplicação ao final da execução
 * [console_q1_2.png](console_q1_2.ṕng) - Retorno do console da aplicação ao executar a aplicação mais de uma vez
 
 ### Construído em
