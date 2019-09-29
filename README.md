@@ -65,11 +65,9 @@ clf; // Limpa a janela gráfica
 plot3d(x,y,z)
 xtitle('Gráfico da questão 1', 'Eixo X', 'Eixo Y', 'Eixo Z = f(x,y)');
 ```
+### Parte 4: Implementação do algoritmo hill climbing
 
-//-----------------------------------------------------------------------------
-// IMPLEMENTAÇÃO DO ALGORITMO HILL CLIMBING
-//-----------------------------------------------------------------------------
-
+```
 // Gera um número aleatório entre 1 e o número de linhas da matriz
 n=grand(1,1,"uin",1,size(z, "r"));
 
@@ -102,3 +100,4 @@ maior = z(n);
         break
     end
 end
+```
