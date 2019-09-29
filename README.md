@@ -15,3 +15,11 @@ Avalie a qualidade de cada modelo pela métrica R2 e R2aj (equações 48 e 49, s
 
 * Elabore um pequeno relatório sobre os resultados obtidos. 
 * As implementações devem ser em C, Java, Python ou Matlab/Scilab. 
+
+## Questão 1
+
+### Iniciando 
+Para a resolução desta questão foram usados dois arquivos:
+
+* *questão1.sce* - Código-fonte da aplicação proposta na questão
+* *relatorio_q1.pdf* - Relatório descritivo dos resultados obtidos 
