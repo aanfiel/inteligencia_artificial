@@ -23,3 +23,8 @@ Para a resolução desta questão foram usados dois arquivos:
 
 * *questão1.sce* - Código-fonte da aplicação proposta na questão
 * *relatorio_q1.pdf* - Relatório descritivo dos resultados obtidos 
+
+### Construído em
+
+* [Scilab 6.0.2](https://www.scilab.org/) - Software open source para computação numérica
+* [Linux Mint 19.2 Tina](https://www.linuxmint.com/) - Sistema operacional usado
