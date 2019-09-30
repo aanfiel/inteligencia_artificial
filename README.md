@@ -150,7 +150,7 @@ Desta forma, a cada execução, o algoritmo pode encontrar diferentes máximos l
 
 Projeto de um simples sistema de freio para um carro, desenvolvido para atuar quando as estradas ficam escorregadias e as rodas travam.
 
-# Regras:
+### Regras:
 
 * Regra 1: SE a pressão no pedal do freio for média ENTÃO **aplicar** o freio.
 * Regra 2: SE a pressão no pedal de freio for alta E a velocidade do carro for alta E a velocidade das rodas for alta ENTÃO **aplicar** o freio.
