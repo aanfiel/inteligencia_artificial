@@ -321,5 +321,4 @@ scatter(MD(:,1), MD(:, 2), 1, "scilabmagenta2", ".");
 plot2d(MD(:,1), y4);
 xlabel("Regressão polinomial de grau 5");
 
-xs2png(0,'questao3.png');
 //Fim do programa
