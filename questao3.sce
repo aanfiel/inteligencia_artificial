@@ -31,14 +31,14 @@ SX6 = 0;    //Soma dos valores de x elevado a sexta potência
 SX7 = 0;    //Soma dos valores de x elevado a setima potência
 SX8 = 0;    //Soma dos valores de x elevado a oitava potência
 SX9 = 0;    //Soma dos valores de x elevado a nona potência
-SX10 = 0;    //Soma dos valores de x elevado a décima potência
+SX10 = 0;   //Soma dos valores de x elevado a décima potência
 
 SY1 = 0;    //Soma dos valores de y
 SYX1 = 0;   //soma dos produtos de y por x
 SYX2 = 0;   //Soma dos produtos de y pelo quadrado de x
 SYX3 = 0;   //Soma dos produtos de y pelo cubo de x
-SYX4 = 0;   //Soma dos produtos de y pela terceira potencia de x
-SYX5 = 0;   //Soma dos produtos de y pela quarta potencia de x
+SYX4 = 0;   //Soma dos produtos de y pela quarta potencia de x
+SYX5 = 0;   //Soma dos produtos de y pela quinta potencia de x
 
 //-----------------------------------------------------------------------------
 // Determina os valores essenciais para o processo
