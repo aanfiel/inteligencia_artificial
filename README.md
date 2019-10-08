@@ -507,14 +507,19 @@ Ao executar o arquivo [questao3.sce](questao3.sce) no Scilab, podemos verificar 
 * O console, por sua vez irá retornar os valores dos coeficientes das equações, a equação encontrada e os coeficientes de determinação (*R2*) e determinação ajustado (*R2aj*) para cada um dos quatro graus de polinômio:
 
 ![console_g2](https://user-images.githubusercontent.com/51038132/66361356-e8934100-e954-11e9-8331-7946f3b4a70e.png)
+
 *Retorno do console do SciLab para o poliômio de grau 2*
 
 ![console_g3](https://user-images.githubusercontent.com/51038132/66361395-02cd1f00-e955-11e9-89bd-8a56a82e7da5.png)
+
 *Retorno do console do SciLab para o poliômio de grau 3*
 
 ![console_g4](https://user-images.githubusercontent.com/51038132/66361413-0fea0e00-e955-11e9-928e-483545ec3eec.png)
+
 *Retorno do console do SciLab para o poliômio de grau 4*
 
 ![console_g5](https://user-images.githubusercontent.com/51038132/66361427-1ed0c080-e955-11e9-9eaf-e3feeb576318.png)
+
 *Retorno do console do SciLab para o poliômio de grau 5*
 
+Ao analisar os gráficos lado a lado podemos perceber um ajuste cada vez maior da linha do gráfico de regressão conforme o grau dos polinômios aumentam, porém a partir do grau 5 o nível de melhora do ajuste é imperceptível a olho nu e ao observarmos os dados dos coeficientes de determinação podemos confirmar esse fato, uma vez que os graus de ajuste permanecem praticamente os mesmos.
