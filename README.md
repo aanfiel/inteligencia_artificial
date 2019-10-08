@@ -196,3 +196,53 @@ Em seguida, foi atribuída a variável **m** o número total de linhas da base d
 //-----------------------------------------------------------------------------
 m=length(MD(:,1))
 ```
+### Parte 3: Inicialização das variáveis usadas no método dos mínimos quadrados
+Todas as variáveis usadas nas matrizes dos polinômios de graus 2, 3, 4 e 5 foram inicializadas e atribuído valor 0.
+```
+//-----------------------------------------------------------------------------
+// Determina os principais parâmetros para determinar as retas de ajuste
+//-----------------------------------------------------------------------------
+SX1 = 0;    //Soma dos valores de x
+SX2 = 0;    //Soma dos valores dos quadrados de x
+SX3 = 0;    //Soma dos valores dos cubos de x
+SX4 = 0;    //Soma dos valores de x elevado a quarta potência
+SX5 = 0;    //Soma dos valores de x elevado a quinta potência
+SX6 = 0;    //Soma dos valores de x elevado a sexta potência
+SX7 = 0;    //Soma dos valores de x elevado a setima potência
+SX8 = 0;    //Soma dos valores de x elevado a oitava potência
+SX9 = 0;    //Soma dos valores de x elevado a nona potência
+SX10 = 0;    //Soma dos valores de x elevado a décima potência
+
+SY1 = 0;    //Soma dos valores de y
+SYX1 = 0;   //soma dos produtos de y por x
+SYX2 = 0;   //Soma dos produtos de y pelo quadrado de x
+SYX3 = 0;   //Soma dos produtos de y pelo cubo de x
+SYX4 = 0;   //Soma dos produtos de y pela terceira potencia de x
+SYX5 = 0;   //Soma dos produtos de y pela quarta potencia de x
+```
+### Parte 4: Atribuição dos valores às variáveis
+Todos os cálculos foram realizados por meio de um laço que percorre toda a matriz **MD** e os valores finais necessários ao método dos mínimos quadrados foram atribuídos às suas respectivas variáveis.
+```
+//-----------------------------------------------------------------------------
+// Determina os valores essenciais para o processo
+//-----------------------------------------------------------------------------
+for j=1:m do
+    SX1 = SX1 + MD(j,1);
+    SX2 = SX2 + MD(j,1)^2;
+    SX3 = SX3 + MD(j,1)^3;
+    SX4 = SX4 + MD(j,1)^4;
+    SX5 = SX5 + MD(j,1)^5;
+    SX6 = SX6 + MD(j,1)^6;
+    SX7 = SX7 + MD(j,1)^7;
+    SX8 = SX8 + MD(j,1)^8;
+    SX9 = SX9 + MD(j,1)^9;
+    SX10 = SX10 + MD(j,1)^10;
+    
+    SY1 = SY1 + MD(j,2);
+    SYX1 = SYX1 + (MD(j,1) * MD(j,2));
+    SYX2 = SYX2 + ((MD(j,1)^2) * MD(j,2));
+    SYX3 = SYX3 + ((MD(j,1)^3) * MD(j,2));
+    SYX4 = SYX4 + ((MD(j,1)^4) * MD(j,2));
+    SYX5 = SYX5 + ((MD(j,1)^5) * MD(j,2));
+end
+```
