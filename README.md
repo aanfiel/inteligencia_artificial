@@ -464,3 +464,57 @@ R25aj = 1-((1-R25).*((m-1)/(m-p))); // Valor de R2 ajustado
 disp("Coeficiente de determinação ajustado R2aj = " + string(R25aj));
 //-----------------------------------------------------------------------------
 ```
+### Parte 9: Plotagem dos gráficos
+Na última parte do código, plotaremos os quatro gráficos em uma única janela.
+```
+clf; // Limpa a janela gráfica
+
+//Plota o gráfico 1
+subplot(221);
+z = [2 67 54];
+scatter(MD(:,1), MD(:, 2), 1, "scilabgreen4", ".");
+plot2d(MD(:,1), y);
+xlabel("Regressão polinomial de grau 2");
+
+//Plota o gráfico 2
+subplot(222);
+scatter(MD(:,1), MD(:, 2), 1, "scilabblue2", ".");
+plot2d(MD(:,1), y2);
+xlabel("Regressão polinomial de grau 3");
+
+//Plota o gráfico 3
+subplot(223);
+scatter(MD(:,1), MD(:, 2), 1, "scilabred2", ".");
+plot2d(MD(:,1), y3);
+xlabel("Regressão polinomial de grau 4");
+
+//Plota o gráfico 4
+subplot(224);
+scatter(MD(:,1), MD(:, 2), 1, "scilabmagenta2", ".");
+plot2d(MD(:,1), y4);
+xlabel("Regressão polinomial de grau 5");
+
+//Fim do programa
+```
+
+## Discussão dos resultados obtidos
+
+Ao executar o arquivo [questao3.sce](questao3.sce) no Scilab, podemos verificar o seguinte comportamento: 
+* A abertura da janela gráfica exibindo os gráfico de regressão dos polinômios de graus 2, 3, 4 e 5:
+
+![grafico_q3](https://user-images.githubusercontent.com/51038132/66360911-1ecfc100-e953-11e9-9393-eeab230c123e.png)
+
+* O console, por sua vez irá retornar os valores dos coeficientes das equações, a equação encontrada e os coeficientes de determinação (*R2*) e determinação ajustado (*R2aj*) para cada um dos quatro graus de polinômio:
+
+![console_g2](https://user-images.githubusercontent.com/51038132/66361356-e8934100-e954-11e9-8331-7946f3b4a70e.png)
+*Retorno do console do SciLab para o poliômio de grau 2*
+
+![console_g3](https://user-images.githubusercontent.com/51038132/66361395-02cd1f00-e955-11e9-89bd-8a56a82e7da5.png)
+*Retorno do console do SciLab para o poliômio de grau 3*
+
+![console_g4](https://user-images.githubusercontent.com/51038132/66361413-0fea0e00-e955-11e9-928e-483545ec3eec.png)
+*Retorno do console do SciLab para o poliômio de grau 4*
+
+![console_g5](https://user-images.githubusercontent.com/51038132/66361427-1ed0c080-e955-11e9-9eaf-e3feeb576318.png)
+*Retorno do console do SciLab para o poliômio de grau 5*
+
