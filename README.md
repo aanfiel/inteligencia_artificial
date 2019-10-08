@@ -305,6 +305,162 @@ d2 = V(3);
 d3 = V(4);
 d4 = V(5);
 d5 = V(6);
+```
+### Parte 8: Exibição dos resultados
+Nesta penúltima (e maior) seção do código, exibiremos no console do SciLab todos os coeficientes das equações (*soluções dos sistemas lineares*), exibiremos a função encontrada e exibiremos os coeficientes de determinação e determinação ajustado, conforme solicitado na questão para cada um dos polinômios de graus 2 a 5.
+```
+//-----------------------------------------------------------------------------
+// Exibe no console os resultados dos sistemas lineares encontrados,
+// cria vetores de valores das funções e calcula os coeficientes de determinação
+//-----------------------------------------------------------------------------
 
+disp("-------POLINÔMIO DO SEGUNDO GRAU---------")
+disp("a0 = " + string(a0)); //Exibe valor do termo independente da equação
+disp("a1 = " + string(a1)); //Exibe valor do coeficiente de x da equação
+disp("a2 = " + string(a2)); //Exibe valor do coeficiente de x² da equação
+// Exibe a equação encontrada y
+disp("Equação da reta Y = " + string(a0) + " + " + string(a1) + "x" + " + " + string(a2) + "x^2");
+// Atribui a um vetor os valores encontrados
+y = a0 + (a1*(MD(:,1))) + (a2*(MD(:,1)^2));
+
+//-----------------------------------------------------------------------------
+//Coeficiente de determinação do polinômio de grau 2
+
+y_estrela = MD(:,2);        // Valor de y da base de dados
+y_media = mean(y_estrela);  // Média dos valores de y da base de dados
+
+SQE = 0;    // Quadrado soma das diferenças entre o valor da função e a média
+SYY = 0;    // Quadrado soma das diferenças entre o valor real e a média
+
+//Determina os valores de SQE e SYY
+for j=1:m do
+    SQE = SQE + ((y(j) - y_media)^2);
+    SYY = SYY + ((y_estrela(j) - y_media)^2);
+end
+
+// Calcula o valor do coeficiente de determinação
+R22 = (SQE/SYY);
+// Exibe o coeficiente de determinação no console
+disp("Coeficiente de determinação R2 = " + string(R22));
+
+// Coeficiente de determinação ajustado
+k = size(MD, 'c'); // numero de colunas da base de dados
+p = k + 1;
+R22aj = 1-((1-R22).*((m-1)/(m-p))); // Valor de R2 ajustado
+disp("Coeficiente de determinação ajustado R2aj = " + string(R22aj));
+
+//-----------------------------------------------------------------------------
+
+disp("-------POLINÔMIO DO TERCEIRO GRAU---------")
+disp("b0 = " + string(b0)); //Exibe valor do termo independente da equação
+disp("b1 = " + string(b1)); //Exibe valor do coeficiente de x da equação
+disp("b2 = " + string(b2)); //Exibe valor do coeficiente de x² da equação
+disp("b3 = " + string(b3)); //Exibe valor do coeficiente de x³ da equação
+// Exibe a equação encontrada y2
+disp("Equação da reta Y = " + string(b0) + " + " + string(b1) + "x" + " + " + string(b2) + "x^2" + " + " + string(b3) + "x^3");
+// Atribui a um vetor os valores encontrados
+y2 = b0 + (b1*(MD(:,1))) + (b2*(MD(:,1)^2)) + (b3*(MD(:,1)^3));
+
+//-----------------------------------------------------------------------------
+//Coeficiente de determinação do polinômio de grau 3
+
+y_estrela = MD(:,2);        // Valor de y da base de dados
+y_media = mean(y_estrela);  // Média dos valores de y da base de dados
+
+SQE = 0;    // Quadrado soma das diferenças entre o valor da função e a média
+SYY = 0;    // Quadrado soma das diferenças entre o valor real e a média
+
+//Determina os valores de SQE e SYY
+for j=1:m do
+    SQE = SQE + ((y2(j) - y_media)^2);
+    SYY = SYY + ((y_estrela(j) - y_media)^2);
+end
+
+// Calcula o valor do coeficiente de determinação
+R23 = (SQE/SYY);
+// Exibe o coeficiente de determinação no console
+disp("Coeficiente de determinação R2 = " + string(R23));
+
+// Coeficiente de determinação ajustado
+k = size(MD, 'c'); // numero de colunas da base de dados
+p = k + 1;
+R23aj = 1-((1-R23).*((m-1)/(m-p))); // Valor de R2 ajustado
+disp("Coeficiente de determinação ajustado R2aj = " + string(R23aj));
+//-----------------------------------------------------------------------------
+disp("-------POLINÔMIO DO QUARTO GRAU---------")
+disp("c0 = " + string(c0)); //Exibe valor do termo independente da equação
+disp("c1 = " + string(c1)); //Exibe valor do coeficiente de x da equação
+disp("c2 = " + string(c2)); //Exibe valor do coeficiente de x² da equação
+disp("c3 = " + string(c3)); //Exibe valor do coeficiente de x³ da equação
+disp("c4 = " + string(c4)); //Exibe valor do coeficiente de x⁴ da equação
+// Exibe a equação encontrada y3
+disp("Equação da reta Y = " + string(c0) + " + " + string(c1) + "x" + " + " + string(c2) + "x^2" + " + " + string(c3) + "x^3" + " + " + string(c4) + "x^4");
+// Atribui a um vetor os valores encontrados
+y3 = c0 + (c1*(MD(:,1))) + (c2*(MD(:,1)^2)) + (c3*(MD(:,1)^3)) + (c4*(MD(:,1)^4));
+
+//-----------------------------------------------------------------------------
+//Coeficiente de determinação do polinômio de grau 4
+
+y_estrela = MD(:,2);        // Valor de y da base de dados
+y_media = mean(y_estrela);  // Média dos valores de y da base de dados
+
+SQE = 0;    // Quadrado soma das diferenças entre o valor da função e a média
+SYY = 0;    // Quadrado soma das diferenças entre o valor real e a média
+
+//Determina os valores de SQE e SYY
+for j=1:m do
+    SQE = SQE + ((y3(j) - y_media)^2);
+    SYY = SYY + ((y_estrela(j) - y_media)^2);
+end
+
+// Calcula o valor do coeficiente de determinação
+R24 = (SQE/SYY);
+// Exibe o coeficiente de determinação no console
+disp("Coeficiente de determinação R2 = " + string(R24));
+
+// Coeficiente de determinação ajustado
+k = size(MD, 'c'); // numero de colunas da base de dados
+p = k + 1;
+R24aj = 1-((1-R24).*((m-1)/(m-p))); // Valor de R2 ajustado
+disp("Coeficiente de determinação ajustado R2aj = " + string(R24aj));
+//-----------------------------------------------------------------------------
+
+disp("-------POLINÔMIO DO QUINTO GRAU---------")
+disp("d0 = " + string(d0)); //Exibe valor do termo independente da equação
+disp("d1 = " + string(d1)); //Exibe valor do coeficiente de x da equação
+disp("d2 = " + string(d2)); //Exibe valor do coeficiente de x² da equação
+disp("d3 = " + string(d3)); //Exibe valor do coeficiente de x³ da equação
+disp("d4 = " + string(d4)); //Exibe valor do coeficiente de x⁴ da equação
+disp("d5 = " + string(d5)); //Exibe valor do coeficiente de x⁵ da equação
+// Exibe a equação da reta y
+disp("Equação da reta Y = " + string(d0) + " + " + string(d1) + "x" + " + " + string(d2) + "x^2" + " + " + string(d3) + "x^3" + " + " + string(d4) + "x^4" + " + " + string(d5) + "x^5");
+// Atribui a um vetor os valores encontrados
+y4 = d0 + (d1*(MD(:,1))) + (d2*(MD(:,1)^2)) + (d3*(MD(:,1)^3)) + (d4*(MD(:,1)^4)) + (d5*(MD(:,1)^5));
+
+//-----------------------------------------------------------------------------
+//Coeficiente de determinação do polinômio de grau 5
+
+y_estrela = MD(:,2);        // Valor de y da base de dados
+y_media = mean(y_estrela);  // Média dos valores de y da base de dados
+
+SQE = 0;    // Quadrado soma das diferenças entre o valor da função e a média
+SYY = 0;    // Quadrado soma das diferenças entre o valor real e a média
+
+//Determina os valores de SQE e SYY
+for j=1:m do
+    SQE = SQE + ((y4(j) - y_media)^2);
+    SYY = SYY + ((y_estrela(j) - y_media)^2);
+end
+
+// Calcula o valor do coeficiente de determinação
+R25 = (SQE/SYY);
+// Exibe o coeficiente de determinação no console
+disp("Coeficiente de determinação R2 = " + string(R25));
+
+// Coeficiente de determinação ajustado
+k = size(MD, 'c'); // numero de colunas da base de dados
+p = k + 1;
+R25aj = 1-((1-R25).*((m-1)/(m-p))); // Valor de R2 ajustado
+disp("Coeficiente de determinação ajustado R2aj = " + string(R25aj));
 //-----------------------------------------------------------------------------
 ```
