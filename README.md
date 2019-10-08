@@ -157,8 +157,12 @@ Avalie a qualidade de cada modelo pela métrica R2 e R2aj (equações 48 e 49, s
 Para a resolução desta questão e criação deste relatório foram usados os seguintes arquivos:
 
 * [questao3.sce](questao3.sce) - Código-fonte da aplicação proposta na questão
-* [aerogerador.dat](aerogerador.dat) - Dataset utilizado na questão
+* [aerogerador.dat](aerogerador.dat) - Conjunto de dados do aerogerado utilizado na questão
 * [grafico_q3.png](grafico_q3.png) - Gráfico gerado pela aplicação durante a execução
+* [console_g2.png](console_g2.png) - Retorno gerado pelo console da aplicação durante a execução para o polinômio de grau 2
+* [console_g3.png](console_g3.png) - Retorno gerado pelo console da aplicação durante a execução para o polinômio de grau 3
+* [console_g4.png](console_g4.png) - Retorno gerado pelo console da aplicação durante a execução para o polinômio de grau 4
+* [console_g5.png](console_g5.png) - Retorno gerado pelo console da aplicação durante a execução para o polinômio de grau 5
 
 ## Código comentado
 
