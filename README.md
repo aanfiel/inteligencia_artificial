@@ -1,9 +1,9 @@
 # 29/09/2019: Trabalho 1 de inteligência computacional
 ### Este repositório hospeda os arquivos necessários à execução do trabalho 1 realizado durante os estudos da disciplina de inteligência computacional
 
-### Universidade Federal do Ceará
-## Inteligência Computacional
-## Professor: Jarbas Joaci de Mesquita Sá Júnior
+# Universidade Federal do Ceará
+### Inteligência Computacional
+### Professor: Jarbas Joaci de Mesquita Sá Júnior
 
 ### Construído em:
 
