@@ -1,20 +1,27 @@
 # 29/09/2019: Trabalho 1 de inteligência computacional
-### Este repositório hospeda os trabalhos realizados durante os estudos de Inteligência Artificial
+### Este repositório hospeda os arquivos necessários à execução do trabalho 1 realizado durante os estudos da disciplina de inteligência computacional
 
-1. Encontre o máximo da função f(x,y) = |xsen(yπ/4) + ysen(xπ/4)| por meio do algoritmo hill-climbing. As variáveis x e y pertencem ao intervalo entre 0 e 20. Os vizinhos de determinado estado (x, y) são (x, y ± 0,01), (x ± 0,01, y) e (x ± 0,01, y ±
-0,01). Por exemplo, os vizinhos do estado (1,00; 1,00) são (1,00; 1,01), (1,01; 1,01), (0,99; 0,99), (0,99; 1,00) etc.
+### Universidade Federal do Ceará
+## Inteligência Computacional
+## Professor: Jarbas Joaci de Mesquita Sá Júnior
 
-2. Construa um programa baseado em lógica fuzzy (inferência de Mamdani) que receba três valores: pressão no pedal, velocidade da roda e velocidade do carro e que devolva a pressão no freio. Siga as regras disponibilizadas nos slides sobre Lógica Fuzzy.
+### Construído em:
 
-3. Usando o conjunto de dados do aerogerador (variável de entrada: velocidade do vento – m/s, variável de saída: potência gerada – kWatts), determine os modelos de regressão polinomial (graus 2, 3, 4 e 5) com parâmetros estimados pelo método dos mínimos quadrados.
-Avalie a qualidade de cada modelo pela métrica R2 e R2aj (equações 48 e 49, slides sobre Regressão Múltipla).
+* [Scilab 6.0.2](https://www.scilab.org/) - Software open source para computação numérica
+* [Linux Mint 19.2 Tina](https://www.linuxmint.com/) - Sistema operacional usado
 
-### Observações:
+### Autor:
 
-* Elabore um pequeno relatório sobre os resultados obtidos. 
-* As implementações devem ser em C, Java, Python ou Matlab/Scilab. 
+* **José Lopes de S. Filho** - [LinkedIn](https://www.linkedin.com/in/joselopesfilho/)
+* *Engenharia da Computação (UFC) - Matrícula # 389097*
+
+### Licença:
+
+Este projeto é licenciado sob a MIT License - ver o arquivo [LICENSE.md](LICENSE.md) para detalhes
 
 ## Questão 1
+
+*Encontre o máximo da função f(x,y) = |xsen(yπ/4) + ysen(xπ/4)| por meio do algoritmo hill-climbing. As variáveis x e y pertencem ao intervalo entre 0 e 20. Os vizinhos de determinado estado (x, y) são (x, y ± 0,01), (x ± 0,01, y) e (x ± 0,01, y ± 0,01). Por exemplo, os vizinhos do estado (1,00; 1,00) são (1,00; 1,01), (1,01; 1,01), (0,99; 0,99), (0,99; 1,00) etc.*
 
 ### Iniciando 
 Para a resolução desta questão e criação deste relatório foram usados os seguintes arquivos:
@@ -23,20 +30,6 @@ Para a resolução desta questão e criação deste relatório foram usados os s
 * [grafico_q1.png](grafico_q1.png) - Gráfico gerado pela aplicação durante a execução
 * [console_q1.png](console_q1.png) - Retorno do console da aplicação ao final da execução
 * [console_q1_2.png](console_q1_2.png) - Retorno do console da aplicação ao executar a aplicação mais de uma vez
-
-### Construído em
-
-* [Scilab 6.0.2](https://www.scilab.org/) - Software open source para computação numérica
-* [Linux Mint 19.2 Tina](https://www.linuxmint.com/) - Sistema operacional usado
-
-### Autor
-
-* **José Lopes de S. Filho** - [LinkedIn](https://www.linkedin.com/in/joselopesfilho/)
-* *Engenharia da Computação (UFC) - Matrícula # 389097*
-
-### Licença
-
-Este projeto é licenciado sob a MIT License - ver o arquivo [LICENSE.md](LICENSE.md) para detalhes
 
 ## Código comentado
 
@@ -146,7 +139,7 @@ Desta forma, a cada execução, o algoritmo pode encontrar diferentes máximos l
 
 **Em desenvolvimento**
 
-Projeto de um simples sistema de freio para um carro, desenvolvido para atuar quando as estradas ficam escorregadias e as rodas travam.
+*Construa um programa baseado em lógica fuzzy (inferência de Mamdani) que receba três valores: pressão no pedal, velocidade da roda e velocidade do carro e que devolva a pressão no freio. Siga as regras disponibilizadas nos slides sobre Lógica Fuzzy.*
 
 ### Regras:
 
@@ -156,6 +149,9 @@ Projeto de um simples sistema de freio para um carro, desenvolvido para atuar qu
 * Regra 4: SE a pressão no pedal de freio for baixa ENTÃO **liberar** o freio.
 
 ## Questão 3
+
+*Usando o conjunto de dados do aerogerador (variável de entrada: velocidade do vento – m/s, variável de saída: potência gerada – kWatts), determine os modelos de regressão polinomial (graus 2, 3, 4 e 5) com parâmetros estimados pelo método dos mínimos quadrados.
+Avalie a qualidade de cada modelo pela métrica R2 e R2aj (equações 48 e 49, slides sobre Regressão Múltipla).*
 
 ### Iniciando 
 Para a resolução desta questão e criação deste relatório foram usados os seguintes arquivos:
