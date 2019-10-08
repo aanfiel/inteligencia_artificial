@@ -199,8 +199,8 @@ SY1 = 0;    //Soma dos valores de y
 SYX1 = 0;   //soma dos produtos de y por x
 SYX2 = 0;   //Soma dos produtos de y pelo quadrado de x
 SYX3 = 0;   //Soma dos produtos de y pelo cubo de x
-SYX4 = 0;   //Soma dos produtos de y pela terceira potencia de x
-SYX5 = 0;   //Soma dos produtos de y pela quarta potencia de x
+SYX4 = 0;   //Soma dos produtos de y pela quarta potencia de x
+SYX5 = 0;   //Soma dos produtos de y pela quinta potencia de x
 ```
 ### Parte 4: Atribuição dos valores às variáveis
 Todos os cálculos foram realizados por meio de um laço que percorre toda a matriz **MD** e os valores finais necessários ao método dos mínimos quadrados foram atribuídos às suas respectivas variáveis.
@@ -227,4 +227,84 @@ for j=1:m do
     SYX4 = SYX4 + ((MD(j,1)^4) * MD(j,2));
     SYX5 = SYX5 + ((MD(j,1)^5) * MD(j,2));
 end
+```
+### Parte 5: Atribuição dos valores às variáveis
+Nesta seção do código, foram montadas as matrizes de coeficientes assim como o vetor de termos independentes dos sistemas lineares utilizados nos polinômios de graus 2, 3, 4 e 5.
+```
+//Matriz dos coeficientes do sistema linear de 2 grau
+A = [m SX1 SX2; 
+    SX1 SX2 SX3; 
+    SX2 SX3 SX4];
+//Vetor dos termos independentes do sistema linear de 2 grau
+b = [SY1; SYX1; SYX2];
+//-----------------------------------------------------------------------------
+//Matriz dos coeficientes do sistema linear de 3 grau
+C = [m SX1 SX2 SX3; 
+    SX1 SX2 SX3 SX4; 
+    SX2 SX3 SX4 SX5; 
+    SX3 SX4 SX5 SX6]; 
+//Vetor dos termos independentes do sistema linear de 3 grau
+d = [SY1; SYX1; SYX2; SYX3];
+//-----------------------------------------------------------------------------
+// Matriz dos coeficientes do sistema linear de 4 grau
+E = [m SX1 SX2 SX3 SX4; 
+     SX1 SX2 SX3 SX4 SX5; 
+     SX2 SX3 SX4 SX5 SX6; 
+     SX3 SX4 SX5 SX6 SX7; 
+     SX4 SX5 SX6 SX7 SX8];
+// Vetor dos termos independentes do sistema linear de 4 grau
+f = [SY1; SYX1; SYX2; SYX3; SYX4];
+//-----------------------------------------------------------------------------
+// Matriz dos coeficientes do sistema linear de 5 grau
+G = [m SX1 SX2 SX3 SX4 SX5; 
+    SX1 SX2 SX3 SX4 SX5 SX6; 
+    SX2 SX3 SX4 SX5 SX6 SX7; 
+    SX3 SX4 SX5 SX6 SX7 SX8; 
+    SX4 SX5 SX6 SX7 SX8 SX9; 
+    SX5 SX6 SX7 SX8 SX9 SX10]; 
+// Vetor dos termos independentes do sistema linear de 5 grau
+h = [SY1; SYX1; SYX2; SYX3; SYX4; SYX5];
+```
+
+### Parte 6: Resolução dos sistemas
+Os sistemas de equações de graus 2 a 5 foram resolvidos por meio de divisões à esquerda das matrizes de coeficientes pelos vetores de termos independentes e as soluções foram armazenadas nos vetores **S**, **T**, **U** e **V**.
+
+```
+// Resolve sistema de segundo grau com divisão à esquerda da matriz A pelo vetor b
+S = A\b; 
+// Resolve sistema de terceiro grau com divisão à esquerda da matriz C pelo vetor d
+T = C\d;
+// Resolve sistema de quarto grau com divisão à esquerda da matriz E pelo vetor f
+U = E\f;
+// Resolve sistema de quinto grau com divisão à esquerda da matriz G pelo vetor h
+V = G\h; 
+```
+
+### Parte 7: Atribuições à variáveis de cada uma das soluções
+Cada uma das soluções dos sistemas lineares foram armazenadas em uma variável distinta.
+
+```
+a0 = S(1);
+a1 = S(2);
+a2 = S(3);
+
+b0 = T(1);
+b1 = T(2);
+b2 = T(3);
+b3 = T(4);
+
+c0 = U(1);
+c1 = U(2);
+c2 = U(3);
+c3 = U(4);
+c4 = U(5);
+
+d0 = V(1);
+d1 = V(2);
+d2 = V(3);
+d3 = V(4);
+d4 = V(5);
+d5 = V(6);
+
+//-----------------------------------------------------------------------------
 ```
