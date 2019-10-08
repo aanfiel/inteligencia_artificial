@@ -160,20 +160,6 @@ Para a resolução desta questão e criação deste relatório foram usados os s
 * [aerogerador.dat](aerogerador.dat) - Dataset utilizado na questão
 * [grafico_q3.png](grafico_q3.png) - Gráfico gerado pela aplicação durante a execução
 
-### Construído em
-
-* [Scilab 6.0.2](https://www.scilab.org/) - Software open source para computação numérica
-* [Linux Mint 19.2 Tina](https://www.linuxmint.com/) - Sistema operacional usado
-
-### Autor
-
-* **José Lopes de S. Filho** - [LinkedIn](https://www.linkedin.com/in/joselopesfilho/)
-* *Engenharia da Computação (UFC) - Matrícula # 389097*
-
-### Licença
-
-Este projeto é licenciado sob a MIT License - ver o arquivo [LICENSE.md](LICENSE.md) para detalhes
-
 ## Código comentado
 
 ### Parte 1: Configuração inicial, e leitura dos dados
