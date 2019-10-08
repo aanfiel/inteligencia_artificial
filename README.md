@@ -522,4 +522,6 @@ Ao executar o arquivo [questao3.sce](questao3.sce) no Scilab, podemos verificar 
 
 *Retorno do console do SciLab para o poliômio de grau 5*
 
+## Conclusão
+
 Ao analisar os gráficos lado a lado podemos perceber um ajuste cada vez maior da linha do gráfico de regressão conforme o grau dos polinômios aumentam, porém a partir do grau 5 o nível de melhora do ajuste é imperceptível a olho nu e ao observarmos os dados dos coeficientes de determinação podemos confirmar esse fato, uma vez que os graus de ajuste permanecem praticamente os mesmos.
