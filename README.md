@@ -1,7 +1,5 @@
-# Projetos de inteligência artificial
-### Este repositório hospeda os trabalhos realizados durante os estudos de Inteligência Artificial
-
 # 29/09/2019: Trabalho 1 de inteligência computacional
+### Este repositório hospeda os trabalhos realizados durante os estudos de Inteligência Artificial
 
 1. Encontre o máximo da função f(x,y) = |xsen(yπ/4) + ysen(xπ/4)| por meio do algoritmo hill-climbing. As variáveis x e y pertencem ao intervalo entre 0 e 20. Os vizinhos de determinado estado (x, y) são (x, y ± 0,01), (x ± 0,01, y) e (x ± 0,01, y ±
 0,01). Por exemplo, os vizinhos do estado (1,00; 1,00) são (1,00; 1,01), (1,01; 1,01), (0,99; 0,99), (0,99; 1,00) etc.
@@ -156,3 +154,45 @@ Projeto de um simples sistema de freio para um carro, desenvolvido para atuar qu
 * Regra 2: SE a pressão no pedal de freio for alta E a velocidade do carro for alta E a velocidade das rodas for alta ENTÃO **aplicar** o freio.
 * Regra 3: SE a pressão no pedal de freio for alta E a velocidade do carro for alta E a velocidade das rodas for baixa ENTÃO **liberar** o freio.
 * Regra 4: SE a pressão no pedal de freio for baixa ENTÃO **liberar** o freio.
+
+## Questão 3
+
+### Iniciando 
+Para a resolução desta questão e criação deste relatório foram usados os seguintes arquivos:
+
+* [questao3.sce](questao3.sce) - Código-fonte da aplicação proposta na questão
+* [aerogerador.dat](aerogerador.dat) - Dataset utilizado na questão
+* [grafico_q3.png](grafico_q3.png) - Gráfico gerado pela aplicação durante a execução
+
+### Construído em
+
+* [Scilab 6.0.2](https://www.scilab.org/) - Software open source para computação numérica
+* [Linux Mint 19.2 Tina](https://www.linuxmint.com/) - Sistema operacional usado
+
+### Autor
+
+* **José Lopes de S. Filho** - [LinkedIn](https://www.linkedin.com/in/joselopesfilho/)
+* *Engenharia da Computação (UFC) - Matrícula # 389097*
+
+### Licença
+
+Este projeto é licenciado sob a MIT License - ver o arquivo [LICENSE.md](LICENSE.md) para detalhes
+
+## Código comentado
+
+### Parte 1: Configuração inicial, e leitura dos dados
+Primeiramente, o arquivo [aerogerador.dat](aerogerador.dat) foi lido pela aplicação e seus dados foram armazenados na matriz **MD**.
+```
+//-----------------------------------------------------------------------------
+// Lê matriz de dados de número variável de linhas por 2 colunas
+//-----------------------------------------------------------------------------
+MD = read('aerogerador.dat', -1, 2);
+```
+### Parte 2: Definição do número de linhas da base de dados
+Em seguida, foi atribuída a variável **m** o número total de linhas da base de dados para uso futuro.
+```
+//-----------------------------------------------------------------------------
+// Determina o número de linhas da matriz
+//-----------------------------------------------------------------------------
+m=length(MD(:,1))
+```
