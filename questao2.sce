@@ -14,7 +14,7 @@ clc;    // Limpa o console
 //-----------------------------------------------------------------------------
 pf = input("Digite a pressão do freio: ");          // Pressão no pedal do freio
 vr = input("Digite a velocidade das rodas: ");      // Velocidade das rodas
-vc = input("Digite a velocidade do carro: ");       // Velocidade 
+vc = input("Digite a velocidade do carro: ");       // Velocidade do carro
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
@@ -133,6 +133,6 @@ end
 centroide = num / den;
 
 // Exibe a centróide da função (defuzzifica)
-disp("Valor defuzzificado da pressão a ser aplicada nos freios: " + string(centroide));
+disp("Valor defuzzificado a ser aplicado nos freios: " + string(centroide));
 
 // Fim do programa
