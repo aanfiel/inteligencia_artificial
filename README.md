@@ -137,8 +137,6 @@ Desta forma, a cada execução, o algoritmo pode encontrar diferentes máximos l
 
 ## Questão 2
 
-**Em desenvolvimento**
-
 *Construa um programa baseado em lógica fuzzy (inferência de Mamdani) que receba três valores: pressão no pedal, velocidade da roda e velocidade do carro e que devolva a pressão no freio. Siga as regras disponibilizadas nos slides sobre Lógica Fuzzy.*
 
 ### Regras:
@@ -159,16 +157,105 @@ Para a resolução desta questão e criação deste relatório foram usados os s
 
 ## Código comentado
 
-### Parte 1: Criação dos vetores
-Primeiramente, foram criados os dados dos dois eixos *x* e *y*. Após a limpeza das variáveis armazenadas e do console para evitar possíveis conflitos, em seguida foram criados doid vetores com valores de 0 a 20 a intervalos de 0,01.
+### Parte 1: Inserção dos valores de entrada
+A primeira parte da aplicação solicita do usuários os valores da pressão aplicada no pedal do freio, a velocidade das rodas e a velocidade do carro.
 ```
-clear; // Limpa as variáveis armazenadas
-clc; // Limpa o console
+//-----------------------------------------------------------------------------
+// RECEBE OS VALORES DE ENTRADA
+//-----------------------------------------------------------------------------
+pf = input("Digite a pressão do freio: ");          // Pressão no pedal do freio
+vr = input("Digite a velocidade das rodas: ");      // Velocidade das rodas
+vc = input("Digite a velocidade do carro: ");       // Velocidade do carro
+//-----------------------------------------------------------------------------
+```
+### Parte 2: 
+No próximo passo, precisamos definir os conjuntos nebulosos para as diferentes variáveis linguísticas. Na atividade proposta, assumiremos os seguintes valores:
 
-// Cria um vetor coluna de valores 0 a 20 com passo 0,01 e os atribui as variáveis x e y
-x=[0: 0.01 : 20]';
-y=[0: 0.01 : 20]';
+Para a pressão no freio teremos três valores linguísticos: alto (A), médio (M) e Baixo (B), que definiremos como segue:
+* A = {(50,0),(100,1)}
+* M = {(30,0), (50,1), (70,0)}
+* B = {(0,1), (50,0)}
+
+Para a velocidade da roda e a velocidade do carro teremos também três valores linguísticos: devagar (D), médio (M) e rápido (R), que definiremos como segue:
+* D = {(0,1), (60, 0)}
+* M = {(20,0), (50,1), (80,0)}
+* R = {(40,0), (100,1)}
+
 ```
+//-----------------------------------------------------------------------------
+// TORNA NEBULOSOS OS VALORES DE ENTRADA (FUZZIFICAÇÃO)
+//-----------------------------------------------------------------------------
+// Para pressão dos freios alto (pfa)
+if(pf >= 50)
+    pfa = (pf / 50)-1;
+else
+    pfa = 0;
+end
+//-----------------------------------------------------------------------------
+// Para pressão dos freios baixo (pfb)
+if (pf <= 50)
+    pfb = (-pf / 50) + 1;
+else
+    pfb = 0;
+end
+//-----------------------------------------------------------------------------
+// Para pressão dos freios médio (pfm)
+if (pf >= 30 && pf <= 50)
+    pfm = (pf - 30) / 20;
+elseif(pf > 50 && pf <= 70)
+    pfm = (-pf + 70) / 20;
+else
+    pfm = 0;
+end
+//-----------------------------------------------------------------------------
+// Para velocidade da roda rápida (vrr)
+if(vr >= 40)
+    vrr = (vr - 40) / 60;
+else
+    vrr = 0;
+end
+//-----------------------------------------------------------------------------
+// Para velocidade da roda devagar (vrd)
+if (vr <= 60)
+    vrd = (-vr / 60) + 1;
+else
+    vrd = 0;
+end
+//-----------------------------------------------------------------------------
+// Para velocidade da roda média (vrm)
+if (vr >= 20 && vr <= 50)
+    vrm = (vr - 20) / 30;
+elseif( vr > 50 && vr <= 80)
+    vrm = (-vr + 80) / 30;
+else
+    vrm = 0;
+end
+//-----------------------------------------------------------------------------
+// Para velocidade do carro rápido (vcr)
+if (vc >= 40)
+    vcr = (vc - 40) / 60;
+else
+    vcr = 0;
+end
+//-----------------------------------------------------------------------------
+// Para velocidade do carro devagar (vcd)
+if (vc <= 60)
+    vcd = (-vc / 60) + 1;
+else
+    vcd = 0;
+end
+//-----------------------------------------------------------------------------
+// Para velocidade do carro médio (vcm)
+if (vc >= 20 && vc <= 50)
+    vcm = (vc - 20) / 30;
+elseif( vc > 50 && vc <= 80)
+     vcm = (-vc + 80) / 30;
+else
+     vcm = 0;
+end
+//-----------------------------------------------------------------------------
+```
+
 
 ## Questão 3
 
