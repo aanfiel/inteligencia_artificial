@@ -148,6 +148,28 @@ Desta forma, a cada execução, o algoritmo pode encontrar diferentes máximos l
 * Regra 3: SE a pressão no pedal de freio for alta E a velocidade do carro for alta E a velocidade das rodas for baixa ENTÃO **liberar** o freio.
 * Regra 4: SE a pressão no pedal de freio for baixa ENTÃO **liberar** o freio.
 
+### Iniciando 
+Para a resolução desta questão e criação deste relatório foram usados os seguintes arquivos:
+
+* [questao2.sce](questao2.sce) - Código-fonte da aplicação proposta na questão
+* [consoleq2_1.png](consoleq2_1.png) - Solicitação da pressão do freio no console
+* [consoleq2_2.png](consoleq2_2.png) - Solicitação da velocidade das rodas no console
+* [consoleq2_3.png](consoleq2_3.png) - Solicitação da velocidade do carro no console
+* [consoleq2_4.png](consoleq2_4.png) - Retorno dos valores fuzzificados e defuzzificados do freio aplicado
+
+## Código comentado
+
+### Parte 1: Criação dos vetores
+Primeiramente, foram criados os dados dos dois eixos *x* e *y*. Após a limpeza das variáveis armazenadas e do console para evitar possíveis conflitos, em seguida foram criados doid vetores com valores de 0 a 20 a intervalos de 0,01.
+```
+clear; // Limpa as variáveis armazenadas
+clc; // Limpa o console
+
+// Cria um vetor coluna de valores 0 a 20 com passo 0,01 e os atribui as variáveis x e y
+x=[0: 0.01 : 20]';
+y=[0: 0.01 : 20]';
+```
+
 ## Questão 3
 
 *Usando o conjunto de dados do aerogerador (variável de entrada: velocidade do vento – m/s, variável de saída: potência gerada – kWatts), determine os modelos de regressão polinomial (graus 2, 3, 4 e 5) com parâmetros estimados pelo método dos mínimos quadrados.
