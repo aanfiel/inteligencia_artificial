@@ -318,6 +318,30 @@ disp("Valor defuzzificado a ser aplicado nos freios: " + string(centroide));
 // Fim do programa
 ```
 
+## Discussão dos resultados obtidos
+
+Ao executar o arquivo [questao2.sce](questao2.sce) no Scilab, podemos observar as seguintes ações: 
+* A solicitação do valor da pressão no pedal dos freios:
+
+![consoleq2_1](https://user-images.githubusercontent.com/51038132/66587151-3def6e00-eb60-11e9-8245-06068f80a44c.png)
+
+* em seguida ele solicita a velocidade das rodas:
+
+![consoleq2_2](https://user-images.githubusercontent.com/51038132/66587203-58c1e280-eb60-11e9-8b7b-2431b6bd58de.png)
+
+* E depois a velocidade do carro:
+
+![consoleq2_3](https://user-images.githubusercontent.com/51038132/66587257-742ced80-eb60-11e9-9468-5e1692c6dd5a.png)
+
+Após a coleta dos dados, será realizado os processos descritos anteriomente no comentário do código e o console irá retornar os valores fuzzificados para pressão e liberação dos freios, assim como o valor defuzzificado aplicado no freio por meio da centróide.
+
+![consoleq2_4](https://user-images.githubusercontent.com/51038132/66587388-afc7b780-eb60-11e9-8d1f-3e98ecebf626.png)
+
+## Conclusão
+
+a lógica fuzzy leva em conta valores de variáveis coletadas e, baseando-se em variáveis linguísticas e regras pré estabelecidas é capaz de chegar a conclusões inteligentes, podendo ser aplicadas nas mais diversas situações.
+
+
 ## Questão 3
 
 *Usando o conjunto de dados do aerogerador (variável de entrada: velocidade do vento – m/s, variável de saída: potência gerada – kWatts), determine os modelos de regressão polinomial (graus 2, 3, 4 e 5) com parâmetros estimados pelo método dos mínimos quadrados.
