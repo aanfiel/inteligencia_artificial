@@ -168,7 +168,7 @@ vr = input("Digite a velocidade das rodas: ");      // Velocidade das rodas
 vc = input("Digite a velocidade do carro: ");       // Velocidade do carro
 //-----------------------------------------------------------------------------
 ```
-### Parte 2: 
+### Parte 2: Fuzzificação dos valores de entrada
 No próximo passo, precisamos definir os conjuntos nebulosos para as diferentes variáveis linguísticas. Na atividade proposta, assumiremos os seguintes valores:
 
 Para a pressão no freio teremos três valores linguísticos: alto (A), médio (M) e Baixo (B), que definiremos como segue:
@@ -255,7 +255,68 @@ else
 end
 //-----------------------------------------------------------------------------
 ```
+### Parte 3: Aplicação das regras da questão
+No próximo seguinte, aplicamos as regras propostas na questão para determinar os valores fuzzificados em que os freio deve ser pressionado, ou liberado. Para a conjunção lógica **E**, é tomado o mínimo dos valores. Em seguida estes valores de pressão são somados assim como os liberação. 
+Na parte final dessa sessão do código, os dois valores fuzzificados são exibidos no console do SciLab.
 
+```
+//-----------------------------------------------------------------------------
+// APLICANDO AS REGRAS DE PRESSÃO E LIBERAÇÃO DOS FREIOS DA QUESTÃO
+//-----------------------------------------------------------------------------
+
+// Aplicação das regras 1 e 2 (Aplica os freios)
+n = [pfa, vcr, vrr];
+aperta = pfm + min(n);
+
+// Aplicação das regras 3 e 4 (Libera os freios)
+m = [pfa, vcr, vrd];
+solta = pfb + min(m);
+
+// Exibe os valores fuzzificados de pressão e liberação dos freios
+disp("Valor fuzzificado da pressão dos freios: " + string(aperta));
+disp("Valor fuzzificado da liberação dos freios: " + string(solta));
+```
+
+### Parte 4: Defuzzificação das informações
+Na penúltima sessão do código, iremos defuzzificar as informações, isto é, descobrir o valor final a ser aplicado nos freios. Para isso usamos o método da centróide, calculada no trecho de código abaixo.
+
+```
+//-----------------------------------------------------------------------------
+// DEFUZZIFICAÇÃO DAS INFORMAÇÕES (POR MEIO DA CENTRÓIDE)
+//-----------------------------------------------------------------------------
+num = 0;
+den = 0;
+
+// Encontra a centróide da função
+i = 5;
+
+while(i <= 100)
+    b = i / 100;
+    if(b < solta)
+        num = num + (i * solta);
+        den = den + solta;
+    elseif(b > aperta)
+        num = num + (i * aperta);
+        den = den + aperta;
+    else
+        num = num + (i * b);
+        den = den + b;
+    end
+    i = i + 5;
+end
+
+centroide = num / den;
+```
+
+### Parte 5: Exibe o valor defuzzificado no console
+O último trecho de código, será exibido no console o valor defuzzificado a ser aplicado nos freios (valor da centróide encontrado).
+O programa é encerrado.
+```
+// Exibe a centróide da função (defuzzifica)
+disp("Valor defuzzificado a ser aplicado nos freios: " + string(centroide));
+
+// Fim do programa
+```
 
 ## Questão 3
 
