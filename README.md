@@ -132,7 +132,9 @@ Ao executar o arquivo [questao1.sce](questao1.sce) no Scilab, podemos verificar 
 
 ![console_q1_2](https://user-images.githubusercontent.com/51038132/65838467-c73daf80-e2d9-11e9-9026-72d3a7743170.png)
 
-Desta forma, a cada execução, o algoritmo pode encontrar diferentes máximos locais, dependendo do valor *n* inicial.
+## Conclusão
+
+O algoritmo Hill Climbing (subida de encosta) é capaz de encontrar a cada execução diferentes máximos locais, dependendo do valor *n* inicial.
 
 
 ## Questão 2
